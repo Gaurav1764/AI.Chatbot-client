@@ -1,13 +1,13 @@
 import axios from "axios";
 
-const API_BASE_URL = "https://ai-chatbot-server-ygx2.onrender.com";
+const API_BASE_URL = "https://ai-chatbot-server-ygx2.onrender.com/api/chat";
 
 /**
  * Sends a message + conversation history + optional file to the backend and
  * returns the assistant's reply text.
  */
 export async function sendMessage(message, history, file = null) {
-  const response = await axios.post(`${API_BASE_URL}/chat`, {
+  const response = await axios.post(`${API_BASE_URL, {
     message,
     history,
     file,
